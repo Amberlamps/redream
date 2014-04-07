@@ -1,0 +1,24 @@
+{
+  "name": "redream",
+  "version": "0.0.1",
+  "author": "Alexander Behrens <alexander.behrens.84@gmail.com>",
+  "description": "Mongoose like wrapper for redis",
+  "bin": {
+    "redream": "./lib"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Amberlamps/redream.git"
+  },
+  "keywords": [
+    "redis",
+    "mongoose"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
