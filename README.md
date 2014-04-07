@@ -5,4 +5,4 @@ Mongoose like wrapper for redis
 
 
 ##Install
-> npm install redream
+    npm install redream
