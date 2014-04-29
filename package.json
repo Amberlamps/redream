@@ -6,6 +6,9 @@
   "bin": {
     "redream": "./lib"
   },
+  "scripts": {
+    "test":"mocha ./test/test"
+  },
   "main": "./lib",
   "repository": {
     "type": "git",
@@ -15,8 +18,13 @@
     "redis",
     "mongoose"
   ],
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "node-uuid": "~1.4.1"
+  },
+  "devDependencies": {
+    "redis": "~0.10.1",
+    "mocha": "~1.18.2"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
