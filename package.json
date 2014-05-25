@@ -7,7 +7,7 @@
     "redream": "./lib"
   },
   "scripts": {
-    "test":"mocha ./test/test"
+    "test": "mocha ./test/test.js"
   },
   "main": "./lib",
   "repository": {
@@ -23,7 +23,8 @@
   },
   "devDependencies": {
     "redis": "~0.10.1",
-    "mocha": "~1.18.2"
+    "mocha": "~1.19.0",
+    "fakeredis": "~0.2.0"
   },
   "optionalDependencies": {},
   "engines": {

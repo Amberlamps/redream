@@ -1,4 +1,4 @@
-var redis = require('redis'),
+var redis = require('fakeredis'),
 	client = redis.createClient(6379, '127.0.0.1'),
 	Redream = require('../lib'),
 	redream = new Redream({
@@ -24,25 +24,50 @@ var schema = new Schema({
 redream.model('Article', schema);
 var Article = redream.model('Article');
 
-Article.set({
 
-	url: '1',
-	price: 2
 
-}, function(err, article) {
 
-	console.log(article);
+
+var assert = require("assert");
+
+describe('Article', function(){
+
+	var article;
+
+	before(function() {
+
+		article = new Article({
+			url: 'http://www.google.de',
+			price: 2
+		});
+
+	});
+
+  describe('#save()', function() {
+
+    it('should save without an error', function(done) {
+			article.save(function(err, article) {
+				if (err) {
+					throw err;
+				}
+				done();
+			});
+    });
+  });
+
+  describe('#save()', function() {
+    it('should save values as entered', function(done) {
+			article.save(function(err, article) {
+				if (err) {
+					throw err;
+				}
+				assert.equal('http://www.google.de', article.url);
+				assert.equal(2, article.price);
+				done();
+			});
+    });
+  });
+
+
 
 });
-
-
-// var assert = require("assert");
-
-// describe('Array', function(){
-//   describe('#indexOf()', function(){
-//     it('should return -1 when the value is not present', function(){
-//       assert.equal(-1, [1,2,3].indexOf(5));
-//       assert.equal(-1, [1,2,3].indexOf(0));
-//     });
-//   });
-// });
