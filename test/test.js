@@ -1,11 +1,12 @@
 var redis = require('fakeredis'),
 	client = redis.createClient(6379, '127.0.0.1'),
-	Redream = require('../lib'),
-	redream = new Redream({
-		prefix: 'test',
-		client: client
-	}),
+	redream = require('../lib'),
 	Schema = redream.Schema;
+
+redream.connect({
+	prefix: 'test',
+	client: client
+});
 
 var schema = new Schema({
 
