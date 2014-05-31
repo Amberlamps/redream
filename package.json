@@ -1,6 +1,6 @@
 {
   "name": "redream",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Alexander Behrens <alexander.behrens.84@gmail.com>",
   "description": "Mongoose like wrapper for redis",
   "bin": {
